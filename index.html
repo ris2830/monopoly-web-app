@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monopoly Web App</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="game-table" aria-label="Monopoly Spielbrett">
+        <div id="board" class="board"></div>
+        <div class="board-center">
+          <h1>Monopoly</h1>
+          <p id="turnSummary">Spiel vorbereiten</p>
+          <div class="dice-row" aria-live="polite">
+            <div id="dieOne" class="die">-</div>
+            <div id="dieTwo" class="die">-</div>
+          </div>
+          <div class="control-row">
+            <button id="rollDice" type="button">Würfeln</button>
+            <button id="endTurn" type="button">Zug beenden</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="side-panel">
+        <section class="setup-panel" id="setupPanel">
+          <h2>Neues Spiel</h2>
+          <label>
+            Spieler
+            <select id="playerCount">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4" selected>4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </label>
+          <button id="startGame" type="button">Spiel starten</button>
+        </section>
+
+        <section>
+          <h2>Spieler</h2>
+          <div id="players" class="players-list"></div>
+        </section>
+
+        <section>
+          <h2>Aktionen</h2>
+          <div id="actionPanel" class="action-panel"></div>
+        </section>
+
+        <section>
+          <h2>Besitz</h2>
+          <div id="portfolio" class="portfolio"></div>
+        </section>
+
+        <section>
+          <h2>Log</h2>
+          <ol id="log" class="event-log"></ol>
+        </section>
+      </aside>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

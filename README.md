@@ -22,13 +22,37 @@ Suggested stack:
 - CSS modules or Tailwind for styling
 - Zustand, Redux Toolkit, or plain reducers for game state
 
-## First Milestone
+## Run
 
-1. Create the board layout.
-2. Add two local players.
-3. Implement dice rolling and token movement.
-4. Let players buy unowned properties.
-5. Charge rent when landing on owned properties.
+```bash
+npm start
+```
+
+Then open `http://localhost:4173`.
+
+No dependencies or build step are required for the current static prototype.
+
+## Implemented
+
+- complete 40-field board data
+- 2-6 local players
+- two dice and turn order
+- passing LOS
+- buying unowned properties
+- rent for streets, stations, and utilities
+- event and community cards
+- jail movement, jail rolls, and jail fine
+- basic mortgages
+- basic house and hotel building when a player owns a full color group
+- bankruptcy reset
+
+## Next Milestones
+
+1. Add real auctions when a player declines a purchase.
+2. Add even-building validation across color groups.
+3. Add selling houses/hotels back to the bank.
+4. Add configurable AI players.
+5. Add saved games and optional online multiplayer.
 
 ## Note
 
